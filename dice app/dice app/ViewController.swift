@@ -9,16 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     @IBOutlet weak var diceImageOne: UIImageView!
     @IBOutlet weak var diceImageTwo: UIImageView!
-    
     var leftDiceNumber = 1
     var rightDiceNumber=1
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        diceImageOne.image=#imageLiteral(resourceName: "six")
-        diceImageTwo.image=#imageLiteral(resourceName: "two")
+        diceImageOne.image=#imageLiteral(resourceName: "five")
+        diceImageTwo.image=#imageLiteral(resourceName: "one")
         
     }
 

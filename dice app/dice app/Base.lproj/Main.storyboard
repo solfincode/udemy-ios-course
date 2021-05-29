@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,52 +16,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="one" translatesAutoresizingMaskIntoConstraints="NO" id="fYw-sI-gZA">
-                                <rect key="frame" x="36" y="367" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="three" translatesAutoresizingMaskIntoConstraints="NO" id="DiS-ah-XqM">
-                                <rect key="frame" x="219" y="367" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dP3-MX-zFf">
-                                <rect key="frame" x="36" y="693" width="303" height="53"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="roll dice">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="rollButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiT-K8-K0y"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll Dice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p8s-gd-531">
-                                <rect key="frame" x="120" y="137" width="135" height="49"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3kL-HI-NY7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c66-Kr-74Q" userLabel="bottomView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dP3-MX-zFf">
+                                                <rect key="frame" x="36" y="703" width="303" height="53"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <state key="normal" title="roll dice">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rollButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiT-K8-K0y"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll the Dice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha5-B7-QHq">
+                                                <rect key="frame" x="94" y="84" width="187" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="five" translatesAutoresizingMaskIntoConstraints="NO" id="lMC-uc-Ohk">
+                                                <rect key="frame" x="127.66666666666669" y="187" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="Pk2-KT-0A2"/>
+                                                    <constraint firstAttribute="height" constant="120" id="anm-VC-epJ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="one" translatesAutoresizingMaskIntoConstraints="NO" id="0Cp-rR-TMF">
+                                                <rect key="frame" x="127" y="359" width="120" height="120"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Ha5-B7-QHq" firstAttribute="top" secondItem="c66-Kr-74Q" secondAttribute="top" constant="84" id="Gqa-M8-iDZ"/>
+                                            <constraint firstItem="lMC-uc-Ohk" firstAttribute="leading" secondItem="0Cp-rR-TMF" secondAttribute="leading" id="YUp-da-MWn"/>
+                                            <constraint firstItem="lMC-uc-Ohk" firstAttribute="top" secondItem="Ha5-B7-QHq" secondAttribute="bottom" constant="61" id="gq7-rP-GC0"/>
+                                            <constraint firstItem="lMC-uc-Ohk" firstAttribute="centerX" secondItem="Ha5-B7-QHq" secondAttribute="centerX" id="gy1-Po-YDP"/>
+                                            <constraint firstItem="lMC-uc-Ohk" firstAttribute="trailing" secondItem="0Cp-rR-TMF" secondAttribute="trailing" id="m5T-kH-513"/>
+                                            <constraint firstItem="Ha5-B7-QHq" firstAttribute="centerX" secondItem="dP3-MX-zFf" secondAttribute="centerX" id="pM1-UH-ZZG"/>
+                                            <constraint firstItem="0Cp-rR-TMF" firstAttribute="top" secondItem="lMC-uc-Ohk" secondAttribute="bottom" constant="46" id="v2J-7O-h7i"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3kL-HI-NY7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2vQ-VF-BNE"/>
+                            <constraint firstItem="3kL-HI-NY7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IlP-oL-oOB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3kL-HI-NY7" secondAttribute="bottom" id="OOy-GU-ev5"/>
+                            <constraint firstItem="3kL-HI-NY7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zVq-6y-ICd"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="diceImageOne" destination="fYw-sI-gZA" id="dBM-b9-Wk6"/>
-                        <outlet property="diceImageTwo" destination="DiS-ah-XqM" id="JfA-Dy-MXm"/>
+                        <outlet property="diceImageOne" destination="lMC-uc-Ohk" id="5Ja-E9-RVQ"/>
+                        <outlet property="diceImageTwo" destination="0Cp-rR-TMF" id="xCK-OE-g5e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.399999999999999" y="87.931034482758619"/>
+            <point key="canvasLocation" x="16.800000000000001" y="87.192118226600982"/>
         </scene>
     </scenes>
     <resources>
+        <image name="five" width="240" height="240"/>
         <image name="one" width="240" height="240"/>
-        <image name="three" width="240" height="240"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
